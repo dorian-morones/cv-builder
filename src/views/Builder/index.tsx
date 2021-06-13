@@ -8,19 +8,28 @@ import InfoForm from './InfoForm';
 import DocViewer from './docViewer';
 import DocSettings from './docSettings';
 
+//styled components
+import {
+  BuilderHeader,
+  BuilderTitle,
+  BuilderSeparator,
+  ContentContainer
+} from './styles/builder_styles';
+
 interface QuestionsViewProps { }
 
 const BuilderView: FunctionComponent<QuestionsViewProps> = () => {
   return (
     <>
-      <div>
-        <p>Fill your information</p>
-      </div>
-      <div>
+      <BuilderHeader>
+        <BuilderTitle>Fill your information</BuilderTitle>
+      </BuilderHeader>
+      <BuilderSeparator />
+      <ContentContainer>
         <InfoForm />
         <DocViewer />
         <DocSettings />
-      </div>
+      </ContentContainer>
     </>
   );
 };

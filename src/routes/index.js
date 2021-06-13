@@ -4,7 +4,7 @@ import {
 
 // Views
 import HomeView from '../views/Home';
-import QuestionsView from '../views/Questions/index'
+import BuilderView from '../views/Builder/index'
 
 
 export const routes = [
@@ -14,8 +14,8 @@ export const routes = [
     exact: true
   },
   {
-    path: "/questions",
-    component: QuestionsView,
+    path: "/builder",
+    component: BuilderView,
     exact: false
   }
 ];

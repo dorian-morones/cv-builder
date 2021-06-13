@@ -11,22 +11,28 @@ import {
 import { routes, RouteItem } from './routes'
 import { createBrowserHistory } from "history";
 
+// global stylehacks
+import { ThemeProvider } from "styled-components";
+import { theme } from './theme';
+
 const history = createBrowserHistory();
 
 function App() {
   return (
     <GlobalProvider>
-      <div className="App">
-        <Router history={history}>
-          <div>
-            <Switch>
-              {routes.map((route, i) => (
-                <RouteItem key={i} {...route} />
-              ))}
-            </Switch>
-          </div>
-        </Router>
-      </div>
+      <ThemeProvider theme={theme}>
+        <div className="App">
+          <Router history={history}>
+            <div>
+              <Switch>
+                {routes.map((route, i) => (
+                  <RouteItem key={i} {...route} />
+                ))}
+              </Switch>
+            </div>
+          </Router>
+        </div>
+      </ThemeProvider>
     </GlobalProvider>
   );
 }

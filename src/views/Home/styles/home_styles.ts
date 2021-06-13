@@ -1,4 +1,8 @@
 import styled from 'styled-components';
+// Routes
+import {
+  Link
+} from "react-router-dom";
 
 export const HomeContainer = styled.div`
   display: flex;
@@ -7,9 +11,11 @@ export const HomeContainer = styled.div`
   height: 100vh;
 `;
 
-export const CreateButton = styled.button`
+export const CreateButton = styled(Link)`
   width: 200px;
-  height: 50px;
+  padding: 15px 0px;
+  text-align: center;
+  text-decoration: none;
   font-size: 18px;
   font-weight: 500;
   border-radius: 8px;

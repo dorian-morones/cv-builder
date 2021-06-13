@@ -7,22 +7,18 @@ import {
   CreateButton
 } from './styles/home_styles';
 
-// Routes
-import {
-  Link
-} from "react-router-dom";
+// router
 import {
   withRouter
 } from 'react-router'
+// import { Link } from 'react-router-dom';
 
 interface HomeViewProps { }
 
 const HomeView: FunctionComponent<HomeViewProps> = () => {
   return (
     <HomeContainer>
-      <CreateButton>Create Resume</CreateButton>
-      <Link to="/questions">questions</Link>
-
+      <CreateButton to="/builder">Create Resume</CreateButton>
     </HomeContainer>
   );
 };

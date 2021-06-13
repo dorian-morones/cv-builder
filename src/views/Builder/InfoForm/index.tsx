@@ -15,6 +15,8 @@ import {
   FormColum,
   FieldsContainer
 } from './styles/infoForm_styles'
+import { initialValues } from './initialValues';
+import { FormSchema } from './validationSchema';
 
 interface InfoFormProps { }
 
@@ -24,7 +26,8 @@ const InfoForm: FunctionComponent<InfoFormProps> = () => {
       <FormContainer>
         <FormTitle>Profile</FormTitle>
         <Formik
-          initialValues={{}}
+          initialValues={initialValues}
+          validationSchema={FormSchema}
           onSubmit={(values, actions) => {
             console.log({ values, actions });
             alert(JSON.stringify(values, null, 2));

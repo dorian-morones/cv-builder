@@ -1,0 +1,31 @@
+interface FormValues {
+  firstName: string,
+  lastName: string,
+  subtitle: string,
+  birthdate: string,
+  address1: string,
+  address2: string,
+  city: string,
+  zipcode: number | string,
+  phoneNumber: number | string,
+  website: string,
+  email: string,
+  objectiveHeadign: string,
+  objectiveSummary: string,
+}
+
+export const initialValues: FormValues = { 
+  firstName: '',
+  lastName: '',
+  subtitle: '',
+  birthdate: '',
+  address1: '',
+  address2: '',
+  city: '',
+  zipcode: '',
+  phoneNumber: '',
+  website: '',
+  email: '',
+  objectiveHeadign: '',
+  objectiveSummary: '',
+};
